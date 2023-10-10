@@ -1,0 +1,65 @@
+body{
+    font-family: 'Tahoma';
+}
+
+.VersionA{
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.VersionB{
+    display: none;
+}
+
+.Extra_Credit{
+    display: none;
+}
+
+
+.allboxs{
+    width: 100px;
+    height: 100%;
+    margin: auto;
+}
+
+.box{
+    margin-bottom: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #dfe1e7;
+    border-color: #687291; 
+    border-top: solid;
+    border-width: 1px;
+}
+
+.box p{
+    font-size: 40px;
+    vertical-align: text-top;
+    text-align: center;
+    position: relative;
+    margin: auto;
+
+}
+
+.boxF{
+    width: 100px;
+    height: 100px;
+}
+
+
+.boxF p {
+    font-size: 40px;
+    text-align: center;
+    margin: 25px;
+}
+
+.boxF{
+    width: 100px;
+    height: 100px;
+    background-color: #687291; 
+    border: solid;
+    border-width: 4px;
+    margin-left: -4px;
+}

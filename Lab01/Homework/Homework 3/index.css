@@ -1,0 +1,45 @@
+.container{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: -50px;
+    margin-top: -10px;
+}
+
+.job {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.list{
+    width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+.list p{
+    font-size: 17px;
+}
+
+.list span{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
