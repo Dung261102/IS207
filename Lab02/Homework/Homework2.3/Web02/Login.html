@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập Tài Khoản</title>
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/login.js" async></script>
+</head>
+<body>
+    <div>
+        <div id="error"></div>
+        <div class="login-page" id="login">
+            <h1>Đăng Nhập Tài Khoản</h1>
+            <form id="form" action="/" method="GET">
+            <div class="input-box">
+                <i class="fa fa-user-o"></i>
+                <input type="text" placeholder="Họ và tên" id="user" required>
+                <small>Error message</small>
+            </div>
+            <div class="input-box">
+                <i class="fa fa-key"></i>
+                <input type="password" placeholder="Mật khẩu" id="pwd" required>
+                <small>Error message</small>
+                <span class="eye" id="eye-icon">
+                    <i class="fa fa-eye" id="hide-eye"></i>
+                    <i class="fa fa-eye-slash" id="hide-eye-slash"></i>
+                </span>
+                    </div>
+            <button type="button" class="login-button" onclick="loginClick()">Đăng Nhập</button>
+            </form>
+        </div>
+    </div>
+    <div class="login-page" id="hello">
+        <h3>Xin chào</h3>
+        <h1 id="user-name">Tên đăng nhập</h1>
+        <p><a href="#" onclick="logoutClick()">Đăng xuất?</a></p>
+    </div>
+</body>
+</html>

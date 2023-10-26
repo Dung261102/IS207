@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parse HTTP Cookie Header</title>
+</head>
+
+<body>
+
+    <h1>Parse HTTP Cookie Header</h1>
+    <input style="width: 500px;" type="text" id="cookieInput" placeholder="Enter cookie string">
+    <button id="parseButton">Parse</button>
+    <pre id="output"></pre>
+
+    <script>
+        function parseCookies(cookieString) {
+            // Initialize an object to store name-value pairs of cookies
+            const cookies = {};
+
+            // Split the cookie string based on semicolon and space
+            const cookiePairs = cookieString.split('; ');
+
+            // Loop through each cookie pair
+            for (const pair of cookiePairs) {
+                // Split the name and value of the cookie based on the equals sign
+                const [name, value] = pair.split('=');
+
+                // Add the name-value pair to the cookies object
+                cookies[name] = decodeURIComponent(value);
+            }
+
+            return cookies;
+        }
+
+        // Add click event listener to the parse button
+        document.getElementById("parseButton").addEventListener("click", function () {
+            const cookieString = document.getElementById("cookieInput").value;
+            const parsedCookies = parseCookies(cookieString);
+            document.getElementById("output").innerText = JSON.stringify(parsedCookies, null, 2);
+        });
+    </script>
+
+</body>
+
+</html>

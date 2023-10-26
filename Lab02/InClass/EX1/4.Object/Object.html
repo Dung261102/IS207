@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Download JSON File</title>
+</head>
+
+<body>
+
+    <button id="downloadButton">Download JSON</button>
+
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            const jsonObject = {
+                name: "Quang Anh",
+                age: 21,
+                country: "Vietnam"
+            };
+
+            const jsonString = JSON.stringify(jsonObject, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'data.json';
+            a.click();
+
+            URL.revokeObjectURL(url);
+        });
+    </script>
+
+</body>
+
+</html>
